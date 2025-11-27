@@ -9,3 +9,21 @@
 @theme {
   --color-ecomzy-red: #ea2e0e;
 }
+/* Hide scrollbar by default */
+.scrollbar-dynamic::-webkit-scrollbar {
+  height: 0px; /* fully hidden */
+}
+
+/* Visible scrollbar when active */
+.scrollbar-dynamic.show-scrollbar::-webkit-scrollbar {
+  height: 8px;               /* thicker = easier to see */
+}
+
+.scrollbar-dynamic.show-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.7); /* less transparent */
+  border-radius: 10px;
+}
+
+.scrollbar-dynamic.show-scrollbar::-webkit-scrollbar-track {
+  background: rgba(200, 200, 200, 0.5);
+}
