@@ -13,7 +13,7 @@ const Navbar = () => {
   // to open and close CartDrawer we will use usestate hook
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  //   for mobile devices
+  //for mobile devices
   const [navDrawerOpen, setNavDrawerOpen] = useState(false);
 
   //function to toggle value of cartDrawer
@@ -41,7 +41,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex space-x-6">
           <Link
-            to="#"
+            to="/collections/all"
             className="text-gray-700 hover:text-black text-sm font-medium uppercase"
           >
             Men
@@ -69,6 +69,10 @@ const Navbar = () => {
         {/* Right Icons */}
 
         <div className="flex items-center space-x-4">
+          <Link to="/admin"
+            className="block bg-black px-2 rounded text-sm text-white">
+            Admin
+          </Link>
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
@@ -100,9 +104,8 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={`fixed top-0 left-0 w-3/4 sm:w-1/2 md:w-1/3 h-full bg-white shadow-lg transform
-        transition-transform duration-300 z-50 ${
-          navDrawerOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        transition-transform duration-300 z-50 ${navDrawerOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleNavDrawer}>
